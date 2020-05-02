@@ -2050,6 +2050,9 @@ a:hover img {
     opacity: 0;
     pointer-events: none
 }
+.mobile-nav__logo{
+    max-width: 360px;
+}
 
 .mobile-nav,
 .mobile-nav.active {

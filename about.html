@@ -26,9 +26,19 @@
   padding-bottom: 90px;
   /* (shorthand) padding: 60px 30px 90px; */
 }
-/* yoink! dropbox colors http://brandcolors.net/ */
-/* sizes: http://www.modularscale.com/?16&px&1.8,1.34164&web&table */
-/* HEADER */
+
+@media (max-width: 700px) {
+  .article {
+    max-width: 90%;
+  
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  
+  }
+}
+
 .category {
   font-family: 'Montserrat', sans-serif;
   color: #7b8994;
@@ -91,9 +101,12 @@ code {
 }
 /* What <display> are images ? */
 /* another great default, for your sanity. */
-img {
-  /* display: block; */
-  max-width: 100%;
+video.vid {
+  display: block;
+  width: 70% !important;
+  object-fit: contain;
+  text-align: center;
+  margin-left: 10vw;
 }
 sup {
   font-family: 'Open Sans', sans-serif;
@@ -125,6 +138,16 @@ div.intro-container.bottom-corners {
   margin: 2px 10px 0 0;
   overflow: hidden;
   padding: 10px;
+}
+@media (max-width: 1000px) {
+  div.intro-container.bottom-corners {
+    background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  border-width: 0;
+  box-sizing: border-box;
+  column-count: 1;
+  
+  }
 }
 
      </style>
@@ -241,41 +264,39 @@ div.intro-container.bottom-corners {
       
 
   
-    <div class="intro-container bottom-corners">
-      <h2>About Monocle</h2>
-      <p>In 2007, Monocle magazine was launched to provide a briefing on global affairs, business, culture, design and much more. We believed that there was a globally minded audience of readers who were hungry for opportunities and experiences beyond their national borders. Today Monocle is published 10 times a year out of our HQ at Midori House in London: we now sell more than 80,000 copies per issue and have 22,500 subscribers and growing. For $135 (€120) a year we make sure that our readers feel part of something more like a club, offering regular invitations to subscriber events and ensuring that they always have great service from our team.</p>
-      <p>Our top 10 markets are the US, the UK, Australia, Canada, Switzerland, Germany, Hong Kong, Portugal, France and Italy; sales in Southeast Asia are also soaring. Monocle has an extensive network of correspondents in cities such as Milan, Bogotá and Paris, as well as bureaux in Tokyo, Hong Kong, Zürich and Toronto. Our newest outpost has opened in Los Angeles.</p>
-      <p>We have stayed loyal to our belief in quality print with our extra publications: <em>The Forecast</em> is packed with insights into the year ahead along with scoops from the world of food and <em>The Entrepreneurs</em> helps you start or run a good business.</p>
-      <p>Our commitment to print extends to seasonal newspapers including specials for events such as Salone del Mobile in Milan and the Venice Biennale.</p>
-      <p>In 2013 we launched our first book in collaboration with Berlin publisher Gestalten. <em>The Monocle Guide to Better Living</em> proved an instant hit and has since been joined by <em>The Monocle Guide to Good Business</em>, <em>The Monocle Guide to Cosy Homes</em>, <em>How to Make a Nation: A Monocle Guide</em>, <em>The Monocle Guide to Drinking &amp; Dining</em>, <em>The Monocle Guide to Hotels, Inns and Hideaways</em>, <em>The Monocle Guide to Building Better Cities</em> and <em>The Monocle Guide to Shops, Kiosks and Markets</em>. And keep your eyes peeled: there are more releases to come this year. We also have a series of <a href="/shop/travel-guides/">travel guides</a> with Gestalten that cover more than 35 cities, including London, New York, Hong Kong, Tokyo, Sydney and Mexico City. In 2020 Monocle will release its first self-published title, <em>The Monocle Book of Japan</em> – a 306-page celebration of all things Japanese, distributed by Thames &amp; Hudson. Keep your eyes peeled for more book releases later in the year.</p>
-      <p>Then there’s Monocle 24, our round-the-clock radio station that launched in 2011. It delivers global news alongside shows on foreign affairs, urbanism, business, culture, design, print media and food and drink. We have a playlist to accompany you too.</p>
-      <p>Our dynamic website, monocle.com, is the place to hear Monocle 24 or, if you are a subscriber, gain access to all the stories ever run in the magazine. The site also hosts our high-quality films and slideshows; beautifully shot and edited by our in-house team of film-makers, they provide a fresh perspective on stories reflecting our editorial philosophy. You can also sign up here for our free daily email bulletins, <a href="/minute/">The Monocle Minute</a> and The Weekend Edition.</p>
-      <p>Monocle’s inaugural <a href="https://conference.monocle.com/">Quality of Life Conference</a> took place in 2015 in Lisbon – and since then we have been to Vienna, Berlin, Zürich and Madrid, each time with inspiring debates alongside great hospitality.</p>
-      <p>Monocle is a complete media brand, with print, audio and online elements – not to mention our expanding retail network and online business. Via our shops in London, Toronto, Hong Kong, Tokyo, Zürich and LA, and our seasonal shop in Merano, Italy, we sell products that cater to our readers’ tastes, produced by brands we believe in. We also have cafés in Zürich and London, as well as a newsstand and coffee concept in London called <a href="http://kioskafe.com/">Kioskafé</a>.</p>
-      <p>Monocle continues to grow its audience but at our core is the simple belief that there will always be a place for a print brand that is committed to telling fresh stories, that sends photographers on assignments and knows that its success is all down to the readers, advertisers and collaborators who have supported us along the way.</p>
-      <p>Monocle – keeping an eye and an ear on the world.</p>
+    <div class="intro-container bottom-corners" style="padding: 40px;">
+      <h2>About Tokyo Homme</h2>
+      <p>Tokyo Homme is a new twist on luxurious living in Tokyo. Energized by visual excitement and a single point of view celebrating craftsmanship, insight and humour, this is a series of storeys and artefacts carefully assembled in the world's largest metropolis.</p>
+      <p>Tokyo Homme was founded in 2018 as a luxury compendium of men's style, grooming & lifestyle in Tokyo. Originally focused on the international business visitor, who needed a no nonsense guide to the city. From where to get a good shirt, to where to take colleagues for dinner. </p>
+      <p>Japan’s No. 1 Men's luxury English Magazine.</p>
+      <p>With a emphasis on future activities, exhibits and news — including the city's most extensive listing of activities, news from society, and sartorial guides — comprehensively guides to what's happening in the world's largest capital city.</p>
+      <p>The best bars and restaurants are monitored by our flagship website and varied social media channels. Keeping the cream of the Tokyo community linked, updated and energised.</p>
+      <p>Tokyo Homme's audience of linked, wealthy & influntial Tokyoites continues to expand. At our heart, however, is the simple conviction that there will always be a place for a print brand that is dedicated to telling fresh storeys, sending photographers on assignments, and ensuring that the readers, advertisers and partners who have helped us along the way have all their success.</p>
     </div>
     
     <figure>
-      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/8533/pancakes.jpg" alt="American style pancakes">
+      <video class="vid" onloadeddata="this.play();this.autoplay=true;" poster="https://c.stocksy.com/a/oZ6600/y2/1455252.mp4" playsinline loop muted autoplay >
+        <source src="https://c.stocksy.com/a/oZ6600/y2/1455252.mp4" type="video/mp4" />
+        Your browser does not support the video tag or the file format of this video.
+    </video>
       <figcaption><strong>Figure 1.</strong> American style pancakes.</figcaption>
     </figure>
    
-    <div class="intro-container bottom-corners">
+    <div class="intro-container bottom-corners" style="padding: 40px;column-count: 1 !important;text-align: center;">
       <h2>Editorial Team</h2>
       <p>Editor-in-chief<br><strong>Kristoff D'oria di Cirie</strong><br>
-        Tel: 44.20 3148 7718<br><a href="mailto:malcolm_young@wallpaper.com">malcolm_young@wallpaper.com</a></p>
+        Tel: 44.20 3148 7718<br><a href="mailto:malcolm_young@tokyohomme.com">malcolm_young@tokyohomme.com</a></p>
       <p>Editorial Director<br><strong>Malcolm Young</strong><br>
-      Tel: 44.20 3148 7718<br><a href="mailto:malcolm_young@wallpaper.com">malcolm_young@wallpaper.com</a></p>
+      Tel: 44.20 3148 7718<br><a href="mailto:malcolm_young@tokyohomme.com">malcolm_young@tokyohomme.com</a></p>
       <p>Global Sales Manager<br><b>Ben St George</b><br>
-        Tel: 44.20 3148 7722<br><a href="mailto:Ben_StGeorge@Wallpaper.com">ben_stgeorge@wallpaper.com</a></p>
+        Tel: 44.20 3148 7722<br><a href="mailto:Ben_StGeorge@tokyohomme.com">ben_stgeorge@tokyohomme.com</a></p>
       <p>Lifestyle Editor<br><strong>Lloyd Lindo</strong><br>
-      Tel: 44.20 3148 7786<br><a href="mailto:malcolm_young@wallpaper.com">lloyd_lindo@wallpaper.com</a></p>
+      Tel: 44.20 3148 7786<br><a href="mailto:malcolm_young@tokyohomme.com">lloyd_lindo@tokyohomme.com</a></p>
       <p>Advertising Director<br><strong>Scott Lambert</strong><br>
-      Tel: 44.20 3148 7726<br><a href="mailto:scott_lambert@wallpaper.com">scott_lambert@wallpaper.com</a></p>
+      Tel: 44.20 3148 7726<br><a href="mailto:scott_lambert@tokyohomme.com">scott_lambert@tokyohomme.com</a></p>
       
       <p>Bespoke Director<br><strong>Sarah Jane Molony</strong><br>
-      Tel: 44.203 148 7704<br><a href="mailto:sarah-jane_molony@wallpaper.com">sarah-jane_molony@wallpaper.com</a></p>
+      Tel: 44.203 148 7704<br><a href="mailto:sarah-jane_molony@tokyohomme.com">sarah-jane_molony@tokyohomme.com</a></p>
       </div>
   </article>
 
