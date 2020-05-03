@@ -738,6 +738,14 @@ input[type='submit']:hover {
     }
 }
 
+@media only screen and (max-height: 440px) {
+    .secondary-navigation .menu-item, {
+        overflow: hidden;
+        font-size: 0.4rem;
+        max-width: 50%;
+    }
+}
+
 .menu-item a {
     font-size: 10px;
     font-size: 1rem;
@@ -1149,6 +1157,14 @@ form .gform_heading {
     vertical-align: middle
 }
 
+@media only screen and (max-width: 440px) {
+    #menu-primary{
+        font-size: 0.8rem;
+        overflow: hidden;
+    }
+     
+    }
+
 
 
 
@@ -1215,6 +1231,7 @@ form .gform_heading {
     overflow: auto
 }
 
+
 .panel-visible #panel {
     transform: translateY(0)
 }
@@ -1229,6 +1246,13 @@ form .gform_heading {
     #panel {
         padding: 2em;
         bottom: 0
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    #panel {
+        max-height: 70vh;
+        overflow: hidden;
     }
 }
 
@@ -1268,12 +1292,14 @@ form .gform_heading {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 440px) {
     #panel .primary-navigation .menu-item a {
         font-size: 30px;
-        font-size: 3rem
+        font-size: 2rem;
+        overflow: hidden;
     }
 }
+
 
 @media only screen and (max-width: 1000px) {
     #panel .search-form {
@@ -1332,4 +1358,6 @@ form .gform_heading {
         margin-top: 3em
     }
 }
+
+
 
