@@ -510,8 +510,28 @@ input[type='submit']:hover {
   
     position: absolute;
     top: 50%;
-    left: 4%;
+    left: 2.5%;
     transform: translate(-50%, -50%)
+}
+
+@media only screen and (max-width:900px){
+    .site-header .date {
+  
+        position: absolute;
+        top: 50%;
+        left: 4% !important;
+        transform: translate(-50%, -50%)
+    }
+}
+
+@media only screen and (max-width:600px){
+    .site-header .date {
+  
+        position: absolute;
+        top: 50%;
+        left: 8.5% !important;
+        transform: translate(-50%, -50%)
+    }
 }
 
 #clock,#date {
