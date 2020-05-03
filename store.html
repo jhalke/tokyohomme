@@ -14,545 +14,544 @@
 
     <link href="white.png" rel="icon" type="image/png">
 
-    <link rel='stylesheet' id='style-css' href='test.css' type='text/css' media='all' />
-    <link rel='stylesheet' type='text/css' href='style.css'/>
-  
-    <script type='text/javascript' src='jquery.js'></script>
-
     <link rel='dns-prefetch' href='https://s.w.org' />
 
-    <style>
-        a,
-        [type="submit"] {
-            -webkit-transition: all .25s ease-in;
-            transition: all .25s ease-in;
-        }
-        
-        .signup__container {
-            margin-top: 50vh;
-            position: absolute !important;
-            top: 50% !important;
-            right: 0;
-            left: 0;
-            margin-right: auto;
-            margin-left: auto;
-            -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-            overflow: hidden;
-            display: -webkit-box;
-            display: flex;
-            -webkit-box-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            justify-content: center;
-            width: 50rem;
-            height: 30rem;
-            border-radius: 0.1875rem;
-            box-shadow: 0px 0.1875rem 0.4375rem rgba(0, 0, 0, 0.25);
-        }
-        
-        .signup__overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.76);
-        }
-        
-        .container__child {
-            width: 50%;
-            height: 100%;
-            color: #fff;
-        }
-        
-        .signup__thumbnail {
-            position: relative;
-            padding: 2rem;
-            display: -webkit-box;
-            display: flex;
-            flex-wrap: wrap;
-            -webkit-box-align: center;
-            align-items: center;
-            background: url(https://thenypost.files.wordpress.com/2018/06/men-shopping-masculine.jpg?quality=90&strip=all&w=618&h=410&crop=1);
-            background-repeat: no-repeat;
-            background-position: top center;
-            background-size: cover;
-        }
-        
-        .thumbnail__logo,
-        .thumbnail__content,
-        .thumbnail__links {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .thumbnail__logo {
-            align-self: flex-start;
-        }
-        
-        .logo__shape {
-            fill: #fff;
-        }
-        
-        .logo__text {
-            display: inline-block;
-            font-size: .8rem;
-            font-weight: 700;
-            vertical-align: bottom;
-        }
-        
-        .thumbnail__content {
-            align-self: center;
-        }
-        
-        h1,
-        h2 {
-            font-weight: 300;
-            color: white;
-        }
-        
-        .heading--primary {
-            font-size: 1.999rem;
-        }
-        
-        .heading--secondary {
-            font-size: 1.414rem;
-        }
-        
-        .thumbnail__links {
-            align-self: flex-end;
-            width: 100%;
-        }
-        
-        .thumbnail__links a {
-            font-size: 1rem;
-            color: #fff;
-        }
-        
-        .thumbnail__links a:focus,
-        .thumbnail__links a:hover {
-            color: rgba(255, 255, 255, 0.5);
-        }
-        
-        .signup__form {
-            padding: 2.5rem;
-            background: #fafafa;
-        }
-        
-        label {
-            font-size: .85rem;
-            text-transform: uppercase;
-            color: #ccc;
-        }
-        
-        .form-control {
-            background-color: transparent;
-            border-top: 0;
-            border-right: 0;
-            border-left: 0;
-            border-radius: 0;
-        }
-        
-        .form-control:focus {
-            border-color: #111;
-        }
-        
-        [type="text"] {
-            color: #111;
-        }
-        
-        [type="password"] {
-            color: #111;
-        }
-        
-        .btn--form {
-            padding: .5rem 2.5rem;
-            font-size: .95rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: #fff;
-            background: #111;
-            border-radius: 2.1875rem;
-        }
-        
-        .btn--form:focus,
-        .btn--form:hover {
-            background: #323232;
-        }
-        
-        .signup__link {
-            font-size: .8rem;
-            font-weight: 600;
-            text-decoration: underline;
-            color: #999;
-        }
-        
-        .signup__link:focus,
-        .signup__link:hover {
-            color: #787878;
-        }
-        
-        .popup-trigger:hover {
-            opacity: .8;
-        }
-        
-        .popup {
-            position: fixed;
-            left: 0;
-            top: 0;
-            height: 100%;
-            z-index: 1000;
-            width: 100%;
-            background-color: rgba(94, 110, 141, 0.9);
-            opacity: 0;
-            visibility: hidden;
-            transition: 500ms all;
-        }
-        
-        .popup.is-visible {
-            opacity: 1;
-            visibility: visible;
-            transition: 1s all;
-        }
-        
-        .is-visible .popup-container {
-            transform: translateY(0);
-            transition: 500ms all;
-        }
-        
-        .popup-container .popup-close {
-            position: absolute;
-            top: 8px;
-            font-size: 0;
-            right: 8px;
-            width: 30px;
-            height: 30px;
-        }
-        
-        .popup-container .popup-close::before,
-        .popup-container .popup-close::after {
-            content: '';
-            position: absolute;
-            top: 12px;
-            width: 14px;
-            height: 3px;
-            background-color: #8f9cb5;
-        }
-        
-        .popup-container .popup-close::before {
-            -webkit-transform: rotate(45deg);
-            -moz-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
-            transform: rotate(45deg);
-            left: 8px;
-        }
-        
-        .popup-container .popup-close::after {
-            -webkit-transform: rotate(-45deg);
-            -moz-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-            right: 8px;
-        }
-        
-        .popup-container .popup-close:hover:before,
-        .popup-container .popup-close:hover:after {
-            background-color: #35a785;
-            transition: 300ms all;
-        }
-        
-        div.b-hp_slider-caption.default_slide.-white {
-            box-sizing: border-box;
-            color: #fff;
-            margin: 44px auto 0;
-            max-width: 1170px;
-            padding-left: 0;
-            width: 100%;
-        }
-        
-        div.b-hp_slider-text {
-            box-sizing: border-box;
-            color: #fff;
-            font-family: "Portrait Text Web", Georgia, Times, serif;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 22px;
-            margin-left: 8px;
-            padding-top: 10% !important;
-            padding-bottom: 30px;
-            width: 50%;
-        }
-        
-        h3.b-hp_slider-title {
-            box-sizing: border-box;
-            color: #fff;
-            font-family: "Portrait Web";
-            font-size: 42px;
-            font-weight: 400;
-            line-height: 1;
-            margin: 0;
-            padding: 0 0 14px;
-        }
-        
-        p.b-hp_slider-subtitle {
-            box-sizing: border-box;
-            margin: 0 0 15px;
-        }
-        
-        a.b-hp_banner-link.-white {
-            background-position: 0 0;
-            border-style: none;
-            box-sizing: border-box;
-            color: #888;
-            cursor: pointer;
-            display: block;
-            font-family: "Darby Sans Semibold";
-            font-size: 11px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            line-height: 25px;
-            margin-top: 16px;
-            outline: 0;
-            text-decoration: underline;
-            text-transform: uppercase;
-            transition: color .2s;
-        }
-        
-        div.l-hp-slot-3 {
-            box-sizing: border-box;
-            width: 80%;
-            text-align: center;
-            overflow: hidden;
-            padding: 20px 0 32px;
-            position: relative;
-            width: 100%;
-        }
-        
-        div.js-carousel.js-productrecommendation_general.l-product_carousel.horizontal_carousel {
-            box-sizing: border-box;
-            overflow: hidden;
-        }
-        
-        div.b-recommendation_title.b-bg_title_box {
-            box-sizing: border-box;
-            font-family: PortraitBold;
-            font-size: 32px;
-            font-weight: 400;
-            line-height: 1;
-            margin: 50px 0 0;
-        }
-        
-        li.l-product_carousel-item.l-product_tile_wrapper.js-product_tile_wrapper {
-            box-sizing: border-box;
-            display: inline-block;
-            vertical-align: top;
-            white-space: normal;
-        }
-        
-        ul.l-product_carousel-list.js-product_carousel-list {
-            box-sizing: border-box;
-            list-style: none;
-            margin: 0;
-            overflow: hidden;
-            padding: 0;
-            white-space: nowrap;
-        }
-        
-        img.js-producttile_image.b-product_image {
-            border-width: 0;
-            box-sizing: border-box;
-            max-height: 225px;
-            max-width: 100%;
-            vertical-align: bottom;
-        }
-        
-        li.l-product_carousel-item.l-product_tile_wrapper.js-product_tile_wrapper {
-            box-sizing: border-box;
-            display: inline-block;
-            vertical-align: top;
-            white-space: normal;
-        }
-        
-        div.b-grid_banners {
-            box-sizing: border-box;
-            margin: 30px -20px 0 0;
-        }
-        
-        div.b-copy-item.b-copy-big_size.top50.left0.top-tablet-20.left-tablet-0 {
-            box-sizing: border-box;
-            color: #fff;
-            left: 0;
-            position: absolute;
-            text-align: center;
-            top: 45vh;
-            width: 100%;
-        }
-        
-        @media screen and (max-width: 800px) {
-            div.b-copy-item.b-copy-big_size.top50.left0.top-tablet-20.left-tablet-0 {
-                display: none !important;
-            }
-        }
-        
-        h2 {
-            box-sizing: border-box;
-            font-family: "Portrait Web";
-            font-size: 32px;
-            font-weight: 400;
-            line-height: 1;
-            margin: 0 0 10px;
-            padding: 0;
-        }
-        
-        p {
-            box-sizing: border-box;
-            font-family: "Portrait Text Web", Georgia, Times, serif;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 25px;
-            margin: 0 0 5px;
-        }
-        
-        a.b-hp_banner-link {
-            background-position: 0 0;
-            border-style: none;
-            box-sizing: border-box;
-            color: #888;
-            cursor: pointer;
-            display: block;
-            font-family: "Darby Sans Semibold";
-            font-size: 11px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            line-height: 25px;
-            margin-top: 16px;
-            outline: 0;
-            text-decoration: underline;
-            text-transform: uppercase;
-            transition: color .2s;
-        }
-        
-        .hero {
-            border-width: 0;
-            box-sizing: border-box;
-            display: block;
-            width: 100%;
-        }
-        
-        div.l-home-page.js-homepage-main {
-            box-sizing: border-box;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 100%;
-            min-height: 1000px;
-        }
-        
-        img.b-grid_banners-image {
-            border-width: 0;
-            box-sizing: border-box;
-            width: 100%;
-        }
-        
-        div.b-grid_banners-item {
-            box-sizing: border-box;
-            display: inline-block;
-            margin: 0 18px 6px 0;
-            vertical-align: top;
-            width: 277px;
-        }
-        
-        @media screen and (max-width: 600px) {
-            div.b-grid_banners-item {
-                width: 90% !important;
-            }
-        }
-        
-        div.hgroup {
-            box-sizing: border-box;
-            text-align: left;
-        }
-        
-        div.b-hp_slider_wrapper {
-            width: 100%;
-            box-sizing: border-box;
-            display: block;
-            left: 0;
-            position: absolute;
-            right: 0;
-            text-align: left;
-            top: 0;
-        }
-        
-        div.b-owl_carousel-image {
-            background-image: url(https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dw8bdb68d3/Homepage/HP_valentine/W11_bottom_dsk.jpg);
-            background-position: 50% 50%;
-            background-repeat: no-repeat no-repeat;
-            background-size: cover;
-            box-sizing: border-box;
-            height: 474px;
-        }
-        
-        div.b-hp_slider-caption.default_slide.-white {
-            box-sizing: border-box;
-            color: #fff;
-            margin: 44px auto 0;
-            max-width: 1170px;
-            padding-left: 0;
-            width: 100%;
-        }
-        
-        div.b-hp_slider-text {
-            box-sizing: border-box;
-            color: #fff;
-            font-family: "Portrait Text Web", Georgia, Times, serif;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 22px;
-            margin-left: 8px;
-            padding-bottom: 30px;
-            width: 50%;
-        }
-        
-        h3.b-grid_banners-title {
-            box-sizing: border-box;
-            font-family: "Portrait Web";
-            font-size: 16px;
-            font-weight: 400;
-            margin: 7px 0 0;
-            padding: 0;
-            text-decoration: none;
-        }
-        
-        h3.b-grid_banners-text {
-            box-sizing: border-box;
-            font-size: 16px;
-            font-weight: 400;
-            margin: 0;
-            padding: 0;
-            text-decoration: none;
-        }
-        
-        a.b-grid_banners-cta {
-            background-position: 0 0;
-            border-style: none;
-            box-sizing: border-box;
-            color: #888;
-            cursor: pointer;
-            font-family: "Darby Sans Text Web Bold";
-            font-size: 11px;
-            font-weight: 400;
-            line-height: 35px;
-            outline: 0;
-            text-decoration: underline;
-            text-transform: uppercase;
-            transition: color .2s;
-        }
-    </style>
+    
 
+<link rel='stylesheet' type='text/css' href='style.css' />
+<link rel='stylesheet' id='style-css' href='test.css' type='text/css' media='all' />
+<script type='text/javascript' src='jquery.js'></script>
+
+<style>
+  a,
+  [type="submit"] {
+      -webkit-transition: all .25s ease-in;
+      transition: all .25s ease-in;
+  }
   
+  div.signup__container {
+      margin-top: 50vh;
+      position: absolute !important;
+      top: 50% !important;
+      right: 0;
+      left: 0;
+      margin-right: auto;
+      margin-left: auto;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      overflow: hidden;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      width: 70rem;
+      height: 60rem;
+      border-radius: 0.1875rem;
+      box-shadow: 0px 0.1875rem 0.4375rem rgba(0, 0, 0, 0.25);
+  }
+  
+  div.signup__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.76);
+  }
+  
+  div.container__child {
+      width: 50%;
+      height: 100%;
+      color: #fff;
+  }
+  
+  div.signup__thumbnail {
+      position: relative;
+      padding: 2rem;
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      align-items: center;
+      background: url(https://thenypost.files.wordpress.com/2018/06/men-shopping-masculine.jpg?quality=90&strip=all&w=618&h=410&crop=1);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: cover;
+  }
+  
+  .thumbnail__logo,
+  .thumbnail__content,
+  .thumbnail__links {
+      position: relative;
+      z-index: 2;
+  }
+  
+  .thumbnail__logo {
+      align-self: flex-start;
+  }
+  
+  .logo__shape {
+      fill: #fff;
+  }
+  
+  .logo__text {
+      display: inline-block;
+      font-size: .8rem;
+      font-weight: 700;
+      vertical-align: bottom;
+  }
+  
+  .thumbnail__content {
+      align-self: center;
+  }
+  
+  h1,
+  h2 {
+      font-weight: 300;
+      color: white;
+  }
+  
+  .heading--primary {
+      font-size: 1.999rem;
+  }
+  
+  .heading--secondary {
+      font-size: 1.414rem;
+  }
+  
+  .thumbnail__links {
+      align-self: flex-end;
+      width: 100%;
+  }
+  
+  .thumbnail__links a {
+      font-size: 1rem;
+      color: #fff;
+  }
+  
+  .thumbnail__links a:focus,
+  .thumbnail__links a:hover {
+      color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .signup__form {
+      padding: 2.5rem;
+      background: #fafafa;
+  }
+  
+  label {
+      font-size: .85rem;
+      text-transform: uppercase;
+      color: #ccc;
+  }
+  
+  .form-control {
+      background-color: transparent;
+      border-top: 0;
+      border-right: 0;
+      border-left: 0;
+      border-radius: 0;
+  }
+  
+  .form-control:focus {
+      border-color: #111;
+  }
+  
+  [type="text"] {
+      color: #111;
+  }
+  
+  [type="password"] {
+      color: #111;
+  }
+  
+  .btn--form {
+      padding: .5rem 2.5rem;
+      font-size: .95rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #fff;
+      background: #111;
+      border-radius: 2.1875rem;
+  }
+  
+  .btn--form:focus,
+  .btn--form:hover {
+      background: #323232;
+  }
+  
+  .signup__link {
+      font-size: .8rem;
+      font-weight: 600;
+      text-decoration: underline;
+      color: #999;
+  }
+  
+  .signup__link:focus,
+  .signup__link:hover {
+      color: #787878;
+  }
+  
+  .popup-trigger:hover {
+      opacity: .8;
+  }
+  
+  .popup {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100%;
+      z-index: 1000;
+      width: 100%;
+      background-color: rgba(94, 110, 141, 0.9);
+      opacity: 0;
+      visibility: hidden;
+      transition: 500ms all;
+  }
+  
+  .popup.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transition: 1s all;
+  }
+  
+  .is-visible .popup-container {
+      transform: translateY(0);
+      transition: 500ms all;
+  }
+  
+  .popup-container .popup-close {
+      position: absolute;
+      top: 8px;
+      font-size: 0;
+      right: 8px;
+      width: 30px;
+      height: 30px;
+  }
+  
+  .popup-container .popup-close::before,
+  .popup-container .popup-close::after {
+      content: '';
+      position: absolute;
+      top: 12px;
+      width: 14px;
+      height: 3px;
+      background-color: #8f9cb5;
+  }
+  
+  .popup-container .popup-close::before {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      left: 8px;
+  }
+  
+  .popup-container .popup-close::after {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      right: 8px;
+  }
+  
+  .popup-container .popup-close:hover:before,
+  .popup-container .popup-close:hover:after {
+      background-color: #35a785;
+      transition: 300ms all;
+  }
+  
+  div.b-hp_slider-caption.default_slide.-white {
+      box-sizing: border-box;
+      color: #fff;
+      margin: 44px auto 0;
+      max-width: 1170px;
+      padding-left: 0;
+      width: 100%;
+  }
+  
+  div.b-hp_slider-text {
+      box-sizing: border-box;
+      color: #fff;
+      font-family: "Portrait Text Web", Georgia, Times, serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      margin-left: 8px;
+      padding-top: 10% !important;
+      padding-bottom: 30px;
+      width: 50%;
+  }
+  
+  h3.b-hp_slider-title {
+      box-sizing: border-box;
+      color: #fff;
+      font-family: "Portrait Web";
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 1;
+      margin: 0;
+      padding: 0 0 14px;
+  }
+  
+  p.b-hp_slider-subtitle {
+      box-sizing: border-box;
+      margin: 0 0 15px;
+  }
+  
+  a.b-hp_banner-link.-white {
+      background-position: 0 0;
+      border-style: none;
+      box-sizing: border-box;
+      color: #888;
+      cursor: pointer;
+      display: block;
+      font-family: "Darby Sans Semibold";
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 25px;
+      margin-top: 16px;
+      outline: 0;
+      text-decoration: underline;
+      text-transform: uppercase;
+      transition: color .2s;
+  }
+  
+  div.l-hp-slot-3 {
+      box-sizing: border-box;
+      width: 80%;
+      text-align: center;
+      overflow: hidden;
+      padding: 20px 0 32px;
+      position: relative;
+      width: 100%;
+  }
+  
+  div.js-carousel.js-productrecommendation_general.l-product_carousel.horizontal_carousel {
+      box-sizing: border-box;
+      overflow: hidden;
+  }
+  
+  div.b-recommendation_title.b-bg_title_box {
+      box-sizing: border-box;
+      font-family: PortraitBold;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1;
+      margin: 50px 0 0;
+  }
+  
+  li.l-product_carousel-item.l-product_tile_wrapper.js-product_tile_wrapper {
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: top;
+      white-space: normal;
+  }
+  
+  ul.l-product_carousel-list.js-product_carousel-list {
+      box-sizing: border-box;
+      list-style: none;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+      white-space: nowrap;
+  }
+  
+  img.js-producttile_image.b-product_image {
+      border-width: 0;
+      box-sizing: border-box;
+      max-height: 225px;
+      max-width: 100%;
+      vertical-align: bottom;
+  }
+  
+  li.l-product_carousel-item.l-product_tile_wrapper.js-product_tile_wrapper {
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: top;
+      white-space: normal;
+  }
+  
+  div.b-grid_banners {
+      box-sizing: border-box;
+      margin: 30px -20px 0 0;
+  }
+  
+  div.b-copy-item.b-copy-big_size.top50.left0.top-tablet-20.left-tablet-0 {
+      box-sizing: border-box;
+      color: #fff;
+      left: 0;
+      position: absolute;
+      text-align: center;
+      top: 45vh;
+      width: 100%;
+  }
+  
+  @media screen and (max-width: 800px) {
+      div.b-copy-item.b-copy-big_size.top50.left0.top-tablet-20.left-tablet-0 {
+          display: none !important;
+      }
+  }
+  
+  h2 {
+      box-sizing: border-box;
+      font-family: "Portrait Web";
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1;
+      margin: 0 0 10px;
+      padding: 0;
+  }
+  
+  p {
+      box-sizing: border-box;
+      font-family: "Portrait Text Web", Georgia, Times, serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 25px;
+      margin: 0 0 5px;
+  }
+  
+  a.b-hp_banner-link {
+      background-position: 0 0;
+      border-style: none;
+      box-sizing: border-box;
+      color: #888;
+      cursor: pointer;
+      display: block;
+      font-family: "Darby Sans Semibold";
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 25px;
+      margin-top: 16px;
+      outline: 0;
+      text-decoration: underline;
+      text-transform: uppercase;
+      transition: color .2s;
+  }
+  
+  .hero {
+      border-width: 0;
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+  }
+  
+  div.l-home-page.js-homepage-main {
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+      min-height: 1000px;
+  }
+  
+  img.b-grid_banners-image {
+      border-width: 0;
+      box-sizing: border-box;
+      width: 100%;
+  }
+  
+  div.b-grid_banners-item {
+      box-sizing: border-box;
+      display: inline-block;
+      margin: 0 18px 6px 0;
+      vertical-align: top;
+      width: 277px;
+  }
+  
+  @media screen and (max-width: 600px) {
+      div.b-grid_banners-item {
+          width: 90% !important;
+      }
+  }
+  
+  div.hgroup {
+      box-sizing: border-box;
+      text-align: left;
+  }
+  
+  div.b-hp_slider_wrapper {
+      width: 100%;
+      box-sizing: border-box;
+      display: block;
+      left: 0;
+      position: absolute;
+      right: 0;
+      text-align: left;
+      top: 0;
+  }
+  
+  div.b-owl_carousel-image {
+      background-image: url(https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dw8bdb68d3/Homepage/HP_valentine/W11_bottom_dsk.jpg);
+      background-position: 50% 50%;
+      background-repeat: no-repeat no-repeat;
+      background-size: cover;
+      box-sizing: border-box;
+      height: 474px;
+  }
+  
+  div.b-hp_slider-caption.default_slide.-white {
+      box-sizing: border-box;
+      color: #fff;
+      margin: 44px auto 0;
+      max-width: 1170px;
+      padding-left: 0;
+      width: 100%;
+  }
+  
+  div.b-hp_slider-text {
+      box-sizing: border-box;
+      color: #fff;
+      font-family: "Portrait Text Web", Georgia, Times, serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22px;
+      margin-left: 8px;
+      padding-bottom: 30px;
+      width: 50%;
+  }
+  
+  h3.b-grid_banners-title {
+      box-sizing: border-box;
+      font-family: "Portrait Web";
+      font-size: 16px;
+      font-weight: 400;
+      margin: 7px 0 0;
+      padding: 0;
+      text-decoration: none;
+  }
+  
+  h3.b-grid_banners-text {
+      box-sizing: border-box;
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+  }
+  
+  a.b-grid_banners-cta {
+      background-position: 0 0;
+      border-style: none;
+      box-sizing: border-box;
+      color: #888;
+      cursor: pointer;
+      font-family: "Darby Sans Text Web Bold";
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 35px;
+      outline: 0;
+      text-decoration: underline;
+      text-transform: uppercase;
+      transition: color .2s;
+  }
+</style>
 
 </head>
 
@@ -624,8 +623,6 @@
 
 </div>
 
-   
-
     <main style="margin-left:3%; margin-right:3%;" class="main" id="root" role="main">
 
         <div class="l-home-page js-homepage-main">
@@ -637,7 +634,7 @@
                     <div class="b-map">
                         <div class="b-map-content">
 
-                            <a href="#0" id="info" class="info popup-trigger"><img class="hero" src="https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dwab5dd2bf/Homepage/HP_valentine/W11_main_dsk.jpg" alt="Spring living room with green and yellow decor" ></a>
+                            <a href="#0" id="info" class="info popup-trigger"><img class="hero" src="https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dwab5dd2bf/Homepage/HP_valentine/W11_main_dsk.jpg" alt="Spring living room with green and yellow decor" class=""></a>
 
                             <span class="js-product_tile">
       <div class="b-copy-item b-copy-big_size top50 left0 top-tablet-20 left-tablet-0"> <h2>Sharp spring style</h2>
@@ -753,7 +750,7 @@
                             </div>
                         </div>
                         <div class="b-grid_banners-item">
-                            <a href="#0" id="info" class="info popup-trigger" ><img class="b-grid_banners-image" alt="group of gem lided glass containers" src="https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dwc79b5a4b/Homepage/HP_valentine/nude.jpg"></a>
+                            <a href="#0" id="info" class="info popup-trigger" class=""><img class="b-grid_banners-image" alt="group of gem lided glass containers" src="https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dwc79b5a4b/Homepage/HP_valentine/nude.jpg"></a>
                             <div class="hgroup">
                                 <h3 class="b-grid_banners-title">Gem stones</h3>
                                 <h3 class="b-grid_banners-text">The Nude Glass collection is a treasure trove of delights</h3>
@@ -868,45 +865,45 @@
             <div class="js-hp-gtm-banner-wrapper" data-asset-id="hp_valentine_grid" data-asset-name="Grid 4x2 for HP S. Valentine">
                 <div class="b-grid_banners">
                     <div class="b-grid_banners-item">
-                        <a href="#0" id="info" class="info popup-trigger"><img class="b-grid_banners-image" alt="group of transparent glass barware products" src="https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dwbf610863/Homepage/HP_valentine/lsa.jpg"></a>
+                        <a class="b-grid_banners-cta" href="#0"><img class="b-grid_banners-image" alt="group of transparent glass barware products" src="https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dwbf610863/Homepage/HP_valentine/lsa.jpg"></a>
                         <div class="hgroup">
                             <h3 class="b-grid_banners-title">Cocktail hour</h3>
                             <h3 class="b-grid_banners-text">LSA International’s graphic glassware is worth toasting</h3>
-                            <a href="#0" id="info" class="info popup-trigger">Shop Now</a>
+                            <a class="b-grid_banners-cta" href="#0">Shop Now</a>
                         </div>
                     </div>
                     <div class="b-grid_banners-item">
-                        <a href="#0" id="info" class="info popup-trigger"><img class="b-grid_banners-image" alt="minimal design table lamp" src="https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dw9752db24/Homepage/HP_valentine/tobiasgrau.jpg"></a>
+                        <a class="b-grid_banners-cta" href="#0"><img class="b-grid_banners-image" alt="minimal design table lamp" src="https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dw9752db24/Homepage/HP_valentine/tobiasgrau.jpg"></a>
                         <div class="hgroup">
                             <h3 class="b-grid_banners-title">Highs and glows</h3>
                             <h3 class="b-grid_banners-text">Magical minimalist lighting from Tobias Grau</h3>
                             <a class="b-g    <div class=" b-grid_banners-item "=">
                             </a>
-                            <a href="#0" id="info" class="info popup-trigger">Shop Now</a>
+                            <class="b-grid_banners-cta" href="#0">Shop Now</a>
                         </div>
                     </div>
                     <div class="b-grid_banners-item">
-                        <a href="#0" id="info" class="info popup-trigger"><img class="b-grid_banners-image" alt="Group of multi-coloured swirled marble vases" src="https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dwb2235832/Homepage/HP_valentine/tomdixon.jpg"></a>
+                        <a class="b-grid_banners-cta" href="#0"><img class="b-grid_banners-image" alt="Group of multi-coloured swirled marble vases" src="https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dwb2235832/Homepage/HP_valentine/tomdixon.jpg"></a>
                         <div class="hgroup">
                             <h3 class="b-grid_banners-title">Block busters</h3>
                             <h3 class="b-grid_banners-text">Tom Dixon’s geometric ‘Swirl’ vases are totally marbleous</h3>
-                            <a href="#0" id="info" class="info popup-trigger">Shop Now</a>
+                            <a class="b-grid_banners-cta" href="#0">Shop Now</a>
                         </div>
                     </div>
                     <div class="b-grid_banners-item">
-                        <a href="#0" id="info" class="info popup-trigger" ><img class="b-grid_banners-image" alt="group of gem lided glass containers" src="https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dwc79b5a4b/Homepage/HP_valentine/nude.jpg"></a>
+                        <a class="b-grid_banners-cta" href="#0" class=""><img class="b-grid_banners-image" alt="group of gem lided glass containers" src="https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dwc79b5a4b/Homepage/HP_valentine/nude.jpg"></a>
                         <div class="hgroup">
                             <h3 class="b-grid_banners-title">Gem stones</h3>
                             <h3 class="b-grid_banners-text">The Nude Glass collection is a treasure trove of delights</h3>
-                            <a href="#0" id="info" class="info popup-trigger">Shop Now</a>
+                            <a class="b-grid_banners-cta" href="#0">Shop Now</a>
                         </div>
                     </div>
                     <div class="b-grid_banners-item">
-                        <a href="#0" id="info" class="info popup-trigger"><img class="b-grid_banners-image" alt="group of black candleholders" src="https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dwff29e824/Homepage/HP_valentine/stoffnagel.jpg"></a>
+                        <a class="b-grid_banners-cta" href="#0"><img class="b-grid_banners-image" alt="group of black candleholders" src="https://store.wallpaper.com/on/demandware.static/-/Library-Sites-Wallpaper/default/dwff29e824/Homepage/HP_valentine/stoffnagel.jpg"></a>
                         <div class="hgroup">
                             <h3 class="b-grid_banners-title">Moveable feast</h3>
                             <h3 class="b-grid_banners-text">Stoff’s midcentury metal candleholders are modular marvels</h3>
-                            <a href="#0" id="info" class="info popup-trigger">Shop Now</a>
+                            <a class="b-grid_banners-cta" href="#0">Shop Now</a>
                         </div>
                     </div>
 
@@ -1029,6 +1026,10 @@
 
     <script type='text/javascript' src='headerscript.js'></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+
     <script>
         $(document).ready(function() {
             $grid = $('.grid').isotope({
@@ -1072,7 +1073,6 @@
             });
         });
     </script>
-    
 </body>
 
 </html>
