@@ -513,15 +513,6 @@ input[type='submit']:hover {
     left: 4%;
     transform: translate(-50%, -50%)
 }
-@media only screen and (max-width:440px){
-    .site-header .date {
-  
-        position: absolute;
-        top: 50%;
-        left: 10%;
-        padding-left:10px;
-        transform: translate(-50%, -50%)
-}
 
 #clock,#date {
 
@@ -751,7 +742,6 @@ input[type='submit']:hover {
     .secondary-navigation .menu-item, {
         overflow: hidden;
         font-size: 0.4rem;
-        max-width: 50%;
     }
 }
 
