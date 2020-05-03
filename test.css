@@ -513,6 +513,14 @@ input[type='submit']:hover {
     left: 4%;
     transform: translate(-50%, -50%)
 }
+@media screen (max-width:450px){
+    .site-header .date {
+  
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translate(-50%, -50%)
+}
 
 #clock,#date {
 
