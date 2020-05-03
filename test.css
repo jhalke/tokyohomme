@@ -1,0 +1,1335 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block
+}
+
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+[hidden],
+template {
+    display: none
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+body {
+    margin: 0
+}
+
+a {
+    background: transparent
+}
+
+a:focus {
+    outline: thin dotted
+}
+
+a:active,
+a:hover {
+    outline: 0
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0
+}
+
+abbr[title] {
+    border-bottom: 0;
+    text-decoration: none
+}
+
+b,
+strong {
+    font-weight: bold
+}
+
+dfn {
+    font-style: italic
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0
+}
+
+mark {
+    background: #ff0;
+    color: #000
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em
+}
+
+pre {
+    white-space: pre-wrap
+}
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019"
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sup {
+    top: -0.5em
+}
+
+sub {
+    bottom: -0.25em
+}
+
+img {
+    border: 0
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+figure {
+    margin: 0
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0;
+    padding: 0.35em 0.625em 0.75em
+}
+
+legend {
+    border: 0;
+    padding: 0
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0
+}
+
+button,
+input {
+    line-height: normal
+}
+
+button,
+select {
+    text-transform: none
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.clear:after,
+.clearfix:after,
+dl:after,
+.post-item a:after,
+.-item:after,
+.post:after,
+.index-posts:after,
+.container:after {
+    content: '';
+    display: table;
+    clear: both
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.text-indent {
+    text-indent: 4em
+}
+
+.loading {
+    cursor: progress
+}
+
+.text-white {
+    color: white
+}
+
+@media only screen and (max-width: 1000px) {
+    .caption-white figcaption em,
+    .caption-white figcaption a {
+        color: white
+    }
+}
+
+
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+    margin-top: 0 !important
+}
+
+body {
+    height: 100%;
+    overflow-x: hidden;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    min-width: 250px;
+    font-family: 'Caslon 540 LT Std', serif;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    flex-flow: column;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+body.posts-accordion-visible {
+    overflow: hidden
+}
+
+body.lightbox-visible {
+    overflow: hidden
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    outline: 0
+}
+
+button {
+    transition: all 0.3s ease;
+    outline: 0;
+    background: none;
+    border: 0
+}
+
+button:focus {
+    background: none;
+    outline: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    line-height: 1
+}
+
+img,
+svg {
+    max-width: 100%;
+    height: auto
+}
+
+select {
+    background: transparent;
+    border-radius: 0;
+    -webkit-appearance: none;
+    display: inline-block;
+    border: 0;
+    padding: 1em;
+    font-size: 14px;
+    font-size: 1.4rem;
+    position: relative;
+    color: inherit
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select {
+        padding-right: 40px;
+        background: transparent url(../images/misc/dropdown.png) no-repeat center right
+    }
+}
+
+select:focus {
+    outline: 0
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0
+}
+
+dl {
+    margin: 0
+}
+
+dl dt,
+dl dd {
+    width: 50%;
+    float: left
+}
+
+dl dt {
+    clear: left
+}
+
+dl dd {
+    margin: 0
+}
+
+label {
+    font-family: 'Caslon 540 LT Std', serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+    font-size: 1.4rem
+}
+
+textarea,
+input {
+    transition: all 0.3s ease;
+    display: inline-block;
+    outline: 0;
+    color: #000;
+    padding: 0.4em 0;
+    background: transparent;
+    font-family: 'Caslon 540 LT Std', serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 14px;
+    font-size: 1.4rem;
+    border: 0;
+    border-bottom: 1px solid
+}
+
+textarea:focus::-webkit-input-placeholder,
+input:focus::-webkit-input-placeholder {
+    opacity: 0.2
+}
+
+textarea:focus:-moz-placeholder,
+input:focus:-moz-placeholder {
+    opacity: 0.2
+}
+
+textarea:focus::-moz-placeholder,
+input:focus::-moz-placeholder {
+    opacity: 0.2
+}
+
+textarea:focus:-ms-input-placeholder,
+input:focus:-ms-input-placeholder {
+    opacity: 0.2
+}
+
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder {
+    opacity: 1;
+    transition: all 0.3s ease;
+    color: inherit;
+    text-transform: lowercase
+}
+
+textarea:-moz-placeholder,
+input:-moz-placeholder {
+    opacity: 1;
+    transition: all 0.3s ease;
+    color: inherit;
+    text-transform: lowercase
+}
+
+textarea::-moz-placeholder,
+input::-moz-placeholder {
+    opacity: 1;
+    transition: all 0.3s ease;
+    color: inherit;
+    text-transform: lowercase
+}
+
+textarea:-ms-input-placeholder,
+input:-ms-input-placeholder {
+    opacity: 1;
+    transition: all 0.3s ease;
+    color: inherit;
+    text-transform: lowercase
+}
+
+textarea {
+    min-height: 100px;
+    min-width: 300px;
+    max-width: 100%;
+    border: 1px solid #000;
+    padding: 0.6em
+}
+
+input[type='submit'] {
+    text-transform: lowercase;
+    border-bottom-color: transparent;
+    padding: 0;
+    line-height: 1
+}
+
+input[type='submit']:hover {
+    border-bottom-color: #000
+}
+
+:focus {
+    outline: none
+}
+
+.site-wrap {
+    flex: 1;
+    flex-flow: column
+}
+
+.site-header {
+    position: fixed;
+    padding: 1em;
+    display: flex;
+    flex-flow: row;
+    background: #fff;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: all 0.3s ease;
+    z-index: 600;
+    border-bottom: 4px double black
+}
+
+.panel-visible .site-header {
+    border-bottom-color: transparent
+}
+
+.site-header .panel-button {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%)
+}
+
+
+
+.site-header .date {
+  
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translate(-50%, -50%)
+}
+
+#clock,#date {
+
+    position: relative;
+    text-align: center;
+    padding-bottom: 5px;
+  
+    color:black;
+  }
+  #clock {
+      top: 50%;
+      width: 80%;
+      font-size: 1.2rem;
+  }
+  #date {
+    font-size: 1.2rem;  
+    top:40%;
+    width: 100%;
+  }
+  .transparent {
+    opacity: 0;
+  }
+.panel-visible .site-header .panel-button {
+    border-color: transparent !important
+}
+
+.panel-visible .site-header .panel-button:before {
+    transform: rotate(135deg)
+}
+
+.panel-visible .site-header .panel-button:after {
+    transform: rotate(-135deg)
+}
+
+.site-header .site-logo {
+    margin-right: auto;
+    margin-right: 1em;
+}
+
+.site-panel {
+    display: flex;
+    flex-flow: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    transition: all 0.3s ease;
+    padding: 0 4em 4em 4em;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+    background: #fff
+}
+
+.panel-visible .site-panel {
+    opacity: 1;
+    visibility: visible
+}
+
+.site-panel .panel-description {
+    max-width: 380px;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin: 2px 0 0 0
+}
+
+.site-panel .panel-description:first-letter {
+    margin-left: 25%
+}
+
+.site-panel .primary-navigation {
+    max-width: 80%;
+    margin-top: 4em
+}
+
+.site-panel .panel-search {
+    max-width: 490px;
+    margin-top: 4em
+}
+
+.site-panel .panel-secondary {
+    position: absolute;
+    bottom: 3em;
+    right: 3em;
+    display: flex;
+    align-items: center
+}
+
+.site-panel .panel-secondary .social-links {
+    margin-left: 2em
+}
+
+.site-main {
+    flex: 1
+}
+
+.site-footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    flex: 0;
+    display: flex;
+    padding: 1em 2em;
+    background: #fff;
+    justify-content: space-between
+}
+
+.site-footer .footer-content {
+    margin-right: 1em
+}
+
+
+
+.panel-visible .site-overlay {
+    display: block
+}
+
+.lightbox-visible .site-overlay {
+    display: block;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 700
+}
+
+.footer-content {
+    font-family: 'Caslon 540 LT Std', serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 10px;
+    font-size: 1rem;
+    line-height: 1.2;
+    text-transform: uppercase
+}
+
+.footer-content span,
+.footer-content a {
+    display: inline-block
+}
+
+.site-logo {
+    background: url(tokyohomme.svg) no-repeat center center;
+    background-size: contain;
+    display: block;
+    width: 20vw;
+    height: 35px;
+}
+
+.primary-navigation .menu {
+    display: flex;
+    flex-flow: wrap
+}
+
+.primary-navigation .menu-item {
+    margin: 0 2em 1em 0;
+    border-right: 1px solid #000;
+    padding: 0 2em 0 0
+}
+
+.primary-navigation .menu-item:last-child {
+    border: 0
+}
+
+.primary-navigation .menu-item a {
+    font-family: 'Schnyder L Light', serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 54px;
+    font-size: 5.4rem;
+    text-transform: uppercase;
+    line-height: 0.8;
+    position: relative;
+    top: 3px
+}
+
+.primary-navigation .menu-item a:hover {
+    color: #aba08c
+}
+
+.primary-navigation .menu-item .post-count {
+    vertical-align: top;
+    margin-left: 2em;
+    font-family: 'BasisGrotesquePro', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 11px;
+    font-size: 1.1rem
+}
+
+.secondary-navigation .menu,
+.footer-navgation .menu {
+    display: flex
+}
+
+.secondary-navigation .menu-item,
+.footer-navgation .menu-item {
+    margin-bottom: 0.2em;
+    padding: 0 1em
+}
+
+.secondary-navigation .menu-item a,
+.footer-navgation .menu-item a {
+    font-family: 'Grotesk', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 14px;
+    font-size: 1.4rem;
+    border-bottom: 1px solid transparent;
+    text-transform: uppercase;
+    line-height: 1.2
+}
+
+.secondary-navigation .menu-item a:hover,
+.footer-navgation .menu-item a:hover {
+    border-bottom-color: #000
+}
+
+@media only screen and (max-width: 500px) {
+    .secondary-navigation .menu-item a,
+    .footer-navgation .menu-item a {
+        font-size: 10px;
+        font-size: 1rem
+    }
+}
+
+.menu-item a {
+    font-size: 10px;
+    font-size: 1rem;
+    display: inline-block;
+    white-space: nowrap
+}
+
+.menu-item a:focus {
+    outline: 0
+}
+
+
+
+.tertiary-button,
+.back-button {
+    font-family: 'Caslon 540 LT Std', serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 10px;
+    font-size: 1rem;
+    display: inline-block;
+    border: 0;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    border-bottom: 1px solid transparent
+}
+
+.tertiary-button:hover,
+.back-button:hover {
+    border-color: inherit
+}
+
+.close-button {
+    position: relative;
+    width: 1em;
+    height: 1em;
+    border: 0;
+    background: none;
+    vertical-align: middle;
+    padding: 0;
+    font-size: 24px;
+    font-size: 2.4rem
+}
+
+.close-button:hover {
+    transform: rotate(180deg)
+}
+
+.close-button:before,
+.close-button:after {
+    content: '';
+    background: #000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    top: 50%;
+    margin-top: -1px
+}
+
+.close-button:before {
+    transform: rotate(45deg)
+}
+
+.close-button:after {
+    transform: rotate(-45deg)
+}
+
+.panel-button {
+    position: relative;
+    width: 1.8em;
+    height: 1em;
+    border: 0;
+    background: none;
+    vertical-align: middle;
+    padding: 0;
+    font-size: 24px;
+    font-size: 2.4rem;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000
+}
+
+.panel-button:before,
+.panel-button:after {
+    content: '';
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    transition: all 0.3s ease;
+    margin-top: -1px
+}
+
+.arrow-button,
+.next-button,
+.previous-button {
+    border: 0;
+    outline: 0;
+    display: inline-block;
+    background: url(../images/icons/arrow.svg) no-repeat center center;
+    width: 26px;
+    height: 14px
+}
+
+.section-dark .arrow-button,
+.section-dark .next-button,
+.section-dark .previous-button {
+    background-image: url(../images/icons/arrow-light.svg)
+}
+
+.next-button {
+    transform: rotate(-90deg)
+}
+
+.previous-button {
+    transform: rotate(90deg)
+}
+
+.back-button {
+    text-transform: lowercase
+}
+
+.social-links {
+    display: flex
+}
+
+.social-links li {
+    margin: 0.5em
+}
+
+.facebook-button,
+.twitter-button,
+.youtube-button,
+.instagram-button,
+.pinterest-button {
+    display: inline-block
+}
+
+.facebook-button:before,
+.twitter-button:before,
+.youtube-button:before,
+.instagram-button:before,
+.pinterest-button:before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat center / contain;
+    background-position: center;
+    background-size: contain;
+    vertical-align: top
+}
+
+.facebook-button:before {
+    background-image: url(../images/icons/facebook.svg)
+}
+
+.twitter-button:before {
+    background-image: url(../images/icons/twitter.svg)
+}
+
+.youtube-button:before {
+    background-image: url(../images/icons/youtube.svg)
+}
+
+.instagram-button:before {
+    background-image: url(../images/icons/instagram.svg)
+}
+
+.pinterest-button:before {
+    background-image: url(../images/icons/pinterest.svg)
+}
+
+.play-button {
+    display: inline-block
+}
+
+.play-button:before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background: url(../images/icons/play.svg) no-repeat;
+    background-size: contain;
+    position: relative;
+    font-size: 3em
+}
+
+.form-title,
+.gform_title {
+    font-family: 'Grotesk', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase
+}
+
+.form-description,
+.gform_description {
+    font-family: 'Caslon 540 LT Std', serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: -0.03em
+}
+
+.form-header .form-description,
+.gform_heading .form-description,
+.form-header .gform_description,
+.gform_heading .gform_description {
+    margin-top: 4em
+}
+
+.form-footer input[type='submit'],
+.gform_footer input[type='submit'] {
+    font-family: 'Grotesk', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-size: 1.6rem
+}
+
+.form-field.hide-label label,
+.hide-label.gfield label {
+    display: none
+}
+
+.form-field .ginput_container_email,
+.gfield .ginput_container_email,
+.form-field .ginput_container_phone,
+.gfield .ginput_container_phone,
+.form-field .ginput_container_text,
+.gfield .ginput_container_text {
+    border-bottom: 1px solid
+}
+
+.form-field.gfield_error .ginput_container,
+.gfield_error.gfield .ginput_container {
+    border-bottom-color: #c10000
+}
+
+.form-field label,
+.gfield label {
+    display: block;
+    font-family: 'Caslon 540 LT Std', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 24px;
+    font-size: 2.4rem;
+    letter-spacing: -0.03em;
+    position: relative;
+    text-transform: lowercase;
+    padding: 0.4em 0
+}
+
+.form-field input,
+.gfield input {
+    width: 100%;
+    border: 0;
+    position: relative;
+    font-family: 'Caslon 540 LT Std', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 24px;
+    font-size: 2.4rem;
+    letter-spacing: -0.03em
+}
+
+.form-field textarea,
+.gfield textarea {
+    width: 100%;
+    max-height: 200px;
+    font-size: 20px;
+    font-size: 2rem;
+    letter-spacing: -0.03em
+}
+
+.form-field .validation_message,
+.gfield .validation_message {
+    display: none
+}
+
+.form-fields .form-field,
+.gform_fields .form-field,
+.form-fields .gfield,
+.gform_fields .gfield {
+    margin-bottom: 0.5em
+}
+
+.form .form-header,
+form .form-header,
+.form .gform_heading,
+form .gform_heading {
+    max-width: 650px;
+    margin-bottom: 2em
+}
+
+.gfield.gf_left_half,
+.gfield.gf_right_half {
+    width: 49% !important;
+    padding-right: 0 !important
+}
+
+.gfield.gf_left_half {
+    margin-right: 2% !important
+}
+
+.gfield input {
+    padding: 0;
+    bottom: -7px;
+    width: 100% !important
+}
+
+.gfield label {
+    padding: 0;
+    bottom: -8px
+}
+
+.validation_error {
+    font-size: 11px;
+    font-size: 1.1rem;
+    font-family: 'BasisGrotesquePro', sans-serif;
+    font-weight: 400;
+    font-style: normal
+}
+
+.gform_confirmation_wrapper {
+    text-align: left
+}
+
+.gform_confirmation_message {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Grotesk', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 1;
+    letter-spacing: -0.06em
+}
+
+.search-form {
+    position: relative;
+    border-bottom: 1px solid #000
+}
+
+.search-form input[type='text'] {
+    font-size: 50px;
+    font-size: 5rem;
+    font-family: 'Caslon 540 LT Std', serif;
+    font-weight: 300;
+    font-style: italic;
+    border-bottom: 0;
+    padding: 0;
+    letter-spacing: -1px;
+    position: relative;
+    top: 0.44em;
+    vertical-align: 0.3em
+}
+
+.search-form input[type='text']:focus::-webkit-input-placeholder {
+    opacity: 0.2;
+    transition: all 0.3s ease
+}
+
+.search-form input[type='text']:focus:-moz-placeholder {
+    opacity: 0.2;
+    transition: all 0.3s ease
+}
+
+.search-form input[type='text']:focus::-moz-placeholder {
+    opacity: 0.2;
+    transition: all 0.3s ease
+}
+
+.search-form input[type='text']:focus:-ms-input-placeholder {
+    opacity: 0.2;
+    transition: all 0.3s ease
+}
+
+.search-form .search-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: 0;
+    vertical-align: bottom
+}
+
+.search-button {
+    font-size: 20px;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 0.4em
+}
+
+.search-button:before {
+    content: '';
+    width: 1em;
+    height: 1em;
+    background: url(../images/icons/arrow-right.svg) center no-repeat;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle
+}
+
+
+
+
+
+
+@keyframes animate-watch-hand {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+
+@media only screen and (max-width: 780px) {
+    .admin-bar #header {
+        top: 0
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #header {
+        padding: 1em
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #header {
+        justify-content: center
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #header .site-logo {
+        width: 100px;
+        height: 24px
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #header .site-logo {
+        margin-left: 0
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #header .panel-button {
+        font-size: 20px;
+        font-size: 2rem
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #header .panel-button {
+        left: auto;
+        right: 0
+    }
+}
+
+#panel {
+    transform: translateY(-130%);
+    transition: all 0.3s ease;
+    overflow: auto
+}
+
+.panel-visible #panel {
+    transform: translateY(0)
+}
+
+@media only screen and (max-width: 1000px) {
+    #panel {
+        margin-top: 53px
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #panel {
+        padding: 2em;
+        bottom: 0
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #panel .panel-description {
+        font-size: 16px;
+        font-size: 1.6rem
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #panel .primary-navigation {
+        max-width: none
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #panel .primary-navigation .menu-item {
+        border-right: 0;
+        padding-right: 0;
+        margin-right: 0;
+        margin-bottom: 0.2em
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #panel .primary-navigation .menu-item a {
+        font-size: 50px;
+        font-size: 5rem
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #panel .primary-navigation .menu-item a {
+        font-size: 40px;
+        font-size: 4rem
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #panel .primary-navigation .menu-item a {
+        font-size: 30px;
+        font-size: 3rem
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #panel .search-form {
+        max-width: 350px
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #panel .search-form input[type='text'] {
+        font-size: 40px;
+        font-size: 4rem;
+        top: 0.5em
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #panel .search-form input[type='text'] {
+        font-size: 20px;
+        font-size: 2rem
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #panel .search-form .search-button {
+        font-size: 16px;
+        font-size: 1.6rem
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #panel .search-form .search-button {
+        font-size: 14px;
+        font-size: 1.4rem
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    #panel .panel-secondary {
+        flex-flow: column;
+        align-items: flex-end
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #panel .panel-secondary {
+        bottom: 2em;
+        right: 2em
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    #panel .panel-secondary {
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 3em
+    }
+}
+

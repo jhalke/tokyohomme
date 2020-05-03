@@ -14,6 +14,11 @@
 
     <link href="white.png" rel="icon" type="image/png">
 
+    <link rel='stylesheet' id='style-css' href='test.css' type='text/css' media='all' />
+    <link rel='stylesheet' type='text/css' href='style.css'/>
+  
+    <script type='text/javascript' src='jquery.js'></script>
+
     <link rel='dns-prefetch' href='https://s.w.org' />
 
     <style>
@@ -547,110 +552,79 @@
         }
     </style>
 
-    <link rel='stylesheet' type='text/css' href='style.css' />
+  
 
 </head>
 
 <body class="home page-template-default page page-id-87">
 
-    <header class='header' data-component='header'>
+  <header id="header" role="banner" class="site-header">
 
-        <div class='header__wrapper'>
-            <div class='header__content'>
+    <div class="date">
 
-                <a class='header__logo' href='index.html'>
-                    <div class='header__logo-l'>
-                        <img class="hero__slideshow--image" src="tokyohomme.svg" alt="">
-                    </div>
-                    <div class='header__logo-f'>
-                        <img src="black.png" alt="tokyo homme" height="60" width="42.850" style="padding-right: 96%;
-    width: 1071.09px;
-    height: 60px;">
-                    </div>
-                </a>
+        <h3 id="date">
+    </h3>
+        <h4 id='clock'>
+    </h4>
+    </div>
 
-                <a class='header__menu-icon' href='#'>
-                    <svg fill="none" height="15" viewbox="0 0 11 15" width="11" xmlns="http://www.w3.org/2000/svg">
-                        <line stroke="currentColor" x1="0.5" x2="0.499999" y1="2.18557e-08" y2="15" />
-                        <line stroke="currentColor" x1="5.5" x2="5.5" y1="1.7606e-08" y2="15" />
-                        <line stroke="currentColor" x1="10.5" x2="10.5" y1="1.7606e-08" y2="15" />
-                    </svg>
-                </a>
+    <button class="panel-button"></button>
 
-                <ul class='header__items' role="navigation">
-                    <li class='header__item'>
-                        <a href='#'>Stories</a>
-                    </li>
+    <a class="site-logo" href="" title="CUBICLE" rel="home"></a>
 
-                    <li class='header__item'>
-                        <a href='#'>Sartoria</a>
-                    </li>
-                    <li class='header__item'>
-                        <a href='#'>Directory</a>
-                    </li>
+</header>
 
-                    <li class='header__item'>
-                        <a href='#'>Shop</a>
-                    </li>
+<div id="panel" class="site-panel">
+    <section style="margin-top: 5%;">
+        <div class="panel-description">
+            Tokyo Homme <em>is a modern take on digital storytelling by</em> SHINI PARK. Energised by visual curiosity and a singular point of view that celebrates craftsmanaship, observation and humour, this is a collection of stories and objects carefully curated with a devotion to soulfulness amid tech.
+            <a href="about/" class="read-more-button">Read More</a>
+        </div>
+
+        <nav class="primary-navigation">
+            <ul id="menu-primary" class="menu">
+              <li id="menu-item-2249"  class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2249"><a href="category.html" style="text-decoration: overline !important; font-size: 5em !important;">All Stories</a><span class="post-count">17</span></li>
+                <li id="menu-item-2249" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2249"><a href="#">Style & Sartoria</a><span class="post-count">17</span></li>
+                <li id="menu-item-4206" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4206"><a href="beauty-skincare/">Grooming &amp; Skin</a><span class="post-count">4</span></li>
+                <li id="menu-item-461" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-461"><a href="assembled-words/">City Guides</a><span class="post-count">5</span></li>
+                <li id="menu-item-461" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-461"><a href="assembled-words/">Interviews</a><span class="post-count">5</span></li>
+                <li id="menu-item-461" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-461"><a href="assembled-words/">Watches</a><span class="post-count">5</span></li>
+                <li id="menu-item-16749" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16749"><a href="design-interiors/">Design &amp; Interiors</a><span class="post-count">1</span></li>
+            </ul>
+        </nav>
+        <div class="panel-search" style="padding-bottom: 5%;">
+            
+        </div>
+
+        <div class="panel-secondary">
+            <nav class="secondary-navigation">
+                <ul id="menu-footer" class="menu">
+                    <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="about/">About</a></li>
+                    <li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="archive/">Store</a></li>
+                    <li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="archive/">Black Book</a></li>
+                    <li id="menu-item-5754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5754"><a href="about/">Advertise / Collaborations</a></li>
                 </ul>
-
-            </div>
+            </nav>
+            <ul class="social-links">
+                <li>
+                    <a target="_blank" href="https://instagram.com/cubicle" class="instagram-button"></a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.pinterest.co.uk/shini/" class="pinterest-button"></a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://twitter.com/cubiclejournal" class="twitter-button"></a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.facebook.com/cubiclejournal/" class="facebook-button"></a>
+                </li>
+            </ul>
         </div>
+    </section>
 
-    </header>
+</div>
 
-    <nav class='mobile-nav'>
-        <div class='mobile-nav__header'>
-            <a class='mobile-nav__logo' href='#'>
-                <img src="white.png" alt="tokyo homme" height="150" width="70" style="padding-right: 80%;
-    height: 100px;">
-            </a>
-
-            <a class='header__menu-close-icon' href='#'>
-                <svg fill="none" height="15" viewbox="0 0 11 15" width="11" xmlns="http://www.w3.org/2000/svg">
-                    <line stroke="currentColor" x1="0.5" x2="0.499999" y1="2.18557e-08" y2="15" />
-                    <line stroke="currentColor" x1="5.5" x2="5.5" y1="1.7606e-08" y2="15" />
-                    <line stroke="currentColor" x1="10.5" x2="10.5" y1="1.7606e-08" y2="15" />
-                </svg>
-            </a>
-        </div>
-
-        <ul class='mobile-nav__items' role="navigation">
-            <li class='mobile-nav__item'>
-                <a href='#'>Stories</a>
-            </li>
-            <li class='mobile-nav__item'>
-                <a href='#'>News</a>
-            </li>
-            <li class='mobile-nav__item'>
-                <a href='#'>City Guides</a>
-            </li>
-            <li class='mobile-nav__item'>
-                <a href='#'>Sartorial Tuition</a>
-            </li>
-            <li class='mobile-nav__item'>
-                <a href='#'>About</a>
-            </li>
-            <li class='mobile-nav__item'>
-                <a href='#'>Black book</a>
-            </li>
-            <li class='mobile-nav__item'>
-                <a href='#'>Shop</a>
-            </li>
-        </ul>
-
-        <ul class='mobile-nav__social'>
-            <li>
-                <a href='#'>Instagram</a>
-            </li>
-            <li>
-                <a href='#'>Facebook</a>
-            </li>
-            <li>
-                <a href='#'>Newsletter</a>
-            </li>
-        </ul>
-    </nav>
+   
 
     <main style="margin-left:3%; margin-right:3%;" class="main" id="root" role="main">
 
@@ -1053,11 +1027,7 @@
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
-    <script src="assets/themes/homme-dept/dist/index.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+    <script type='text/javascript' src='headerscript.js'></script>
 
     <script>
         $(document).ready(function() {
@@ -1102,6 +1072,7 @@
             });
         });
     </script>
+    
 </body>
 
 </html>

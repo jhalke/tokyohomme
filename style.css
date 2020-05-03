@@ -251,9 +251,7 @@ template {
     --space-extra-large: 62px;
     --z-index-header: 20;
     --z-index-menu-icon: 40;
-    --z-index-mobile-nav: 50;
     --z-index-lightbox: 60;
-    --duration-mobile-nav: 0.35s;
     --duration-lightbox: 0.35s;
     --duration-link-hover: 0.5s;
     --opacity-link-hover: 0.7;
@@ -303,7 +301,7 @@ a:hover img {
 .is-transitioning #root,
 .lazyload,
 .lazyloading {
-    opacity: 0
+    opacity: 100;
 }
 
 .lazyloaded {
@@ -602,7 +600,12 @@ a:hover img {
     .featured-content__main-feature {
         width: 50%;
         height: 100vh;
-        margin-bottom: 0
+        margin-bottom: 0;
+        -o-object-fit: cover;
+        object-fit: cover;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
     }
 }
 
@@ -1952,6 +1955,11 @@ a:hover img {
     color: #000;
     z-index: var(--z-index-header)
 }
+@media (max-width:600px) {
+    .header__logo {
+    max-width: 30vw;
+    }
+}
 
 .header__logo--light {
     color: #fff
@@ -1964,11 +1972,7 @@ a:hover img {
     padding: 0
 }
 
-@media (max-width:600px) {
-    .header__items {
-        display: none
-    }
-}
+
 
 .header__item {
     display: block;
@@ -2035,66 +2039,10 @@ a:hover img {
     color: #222
 }
 
-.mobile-nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: var(--z-index-mobile-nav);
-    background-color: #222;
-    color: #fff;
-    padding: 0 calc(var(--space-small) + var(--space));
-    display: flex;
-    flex-direction: column;
-    opacity: 0;
-    pointer-events: none
-}
-.mobile-nav__logo{
-    max-width: 360px;
-}
 
-.mobile-nav,
-.mobile-nav.active {
-    transition: opacity var(--duration-mobile-nav) ease-in-out
-}
+ 
 
-.mobile-nav.active {
-    opacity: 1;
-    pointer-events: all
-}
 
-.mobile-nav__header {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 24px;
-    margin-bottom: 120px
-}
-
-.mobile-nav__items {
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-    line-height: 210%
-}
-
-.mobile-nav__items,
-.mobile-nav__social {
-    list-style: none;
-    font-family: var(--font-sans)
-}
-
-.mobile-nav__social {
-    border-top: 1px solid #444;
-    margin-top: auto;
-    margin-bottom: var(--space-extra-large);
-    margin-left: 0;
-    padding: 25px 0 0;
-    font-size: 9px;
-    line-height: 224.5%;
-    letter-spacing: .08em;
-    text-transform: uppercase
-}
 
 .pagination {
     margin-bottom: var(--space-extra-large);
